@@ -16,6 +16,10 @@ const notoSansJP = Noto_Sans_JP({
 })
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: 'Studio Workflow — クライアントワーク完全マスター講座',
   description: '案件受注後から納品まで。クライアントワークの全工程を、この1本で完全マスター。限定20部・67%OFF特別価格：9,800円',
   generator: 'v0.app',
