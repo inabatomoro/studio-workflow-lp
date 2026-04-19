@@ -147,12 +147,6 @@ export function Curriculum() {
           ))}
         </div>
 
-        {/* Total */}
-        <FadeIn delay={400} className="mt-8 text-center">
-          <p className="text-sm text-[var(--text-muted)]">
-            全 <span className="font-bold text-[var(--accent-on-light)] text-lg number-display">50本以上</span> の動画講義
-          </p>
-        </FadeIn>
       </div>
     </section>
   )

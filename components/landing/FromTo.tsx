@@ -20,7 +20,7 @@ export function FromTo() {
         <div className="flex flex-col md:flex-row items-stretch gap-5">
           {/* FROM */}
           <FadeIn direction="left" className="flex-1">
-            <div className="h-full rounded-2xl p-5 md:p-8 bg-slate-100/60 border border-slate-200/60 opacity-80">
+            <div className="h-full rounded-2xl p-5 md:p-8 bg-slate-100/60 border border-slate-300 opacity-80">
               <span className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full mb-6 bg-slate-200 text-slate-400">
                 <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
                 BEFORE

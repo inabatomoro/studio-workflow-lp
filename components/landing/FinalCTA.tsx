@@ -18,10 +18,10 @@ export function FinalCTA() {
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <FadeIn>
-          <p className="section-label justify-center mb-6 text-[var(--accent-color)]">FINAL MESSAGE</p>
+          <p className="section-label justify-center mb-6 text-[var(--accent-color)]">MESSAGE</p>
 
           <h2 className="text-3xl md:text-5xl font-black leading-tight mb-10 text-white">
-            昔の自分と同じように<br />
+            私たちと同じように<br />
             <span className="text-gradient-gold-bright">悩むあなたへ。</span>
           </h2>
         </FadeIn>
@@ -29,26 +29,26 @@ export function FinalCTA() {
         <FadeIn delay={200}>
           <div className="glass-card-dark rounded-2xl px-8 py-8 mb-12 text-left">
             <p className="text-base md:text-lg leading-[1.9] text-white/70 mb-4">
-              僕自身、Studioを立ち上げたばかりのころは身近に相談できる人も少なく、一番欲しかった<span className="text-white font-semibold">「制作会社の現場で使われている、リアルな実務の手法」</span>はどこにも載っていませんでした。
+              私たちもWeb制作を始めたばかりのころは身近に相談できる人も少なく、一番欲しかった<span className="text-white font-semibold">「現場で使われている、リアルな手法」</span>を知ることはできませんでした。
             </p>
             <p className="text-base md:text-lg leading-[1.9] text-white/70">
-              だからこそ、過去の自分のように悩んでいる方に向けて、実働で役立つ情報をすべてこのコンテンツに詰め込みました。
+              手探りの期間が長く、かなり遠回りした自覚がありますね。だからこそ、過去の私たちのように悩んでいる方に向けて、実働で役立つ情報をお渡ししたいと思い、コンテンツに詰め込みました。
             </p>
             <p className="text-base md:text-lg leading-[1.9] text-white font-semibold mt-4">
-              皆さんのスキルアップが「クライアントからの信頼」と「リピート案件」に直結する、最高のロードマップになれば嬉しいです。
+              デザインや実装のハードスキルだけじゃない「案件進行の全体像」を把握して、「クライアントからの信頼」を勝ち取る足掛かりとしていただければ嬉しいです！
             </p>
           </div>
         </FadeIn>
 
         <FadeIn delay={400}>
-          <div className="relative group max-w-md mx-auto mb-10">
+          <div className="relative group mb-10">
             {/* Glow */}
-            <div className="absolute -inset-3 bg-gradient-to-b from-[var(--accent-color)]/30 to-transparent rounded-3xl blur-2xl opacity-70 animate-pulse" />
+            <div className="absolute -inset-4 bg-gradient-to-b from-[var(--accent-color)]/25 via-[var(--accent-color)]/10 to-transparent rounded-[2.5rem] blur-3xl opacity-80 animate-pulse" />
             <div className="absolute -inset-[1px] bg-gradient-to-b from-[var(--accent-color)]/50 via-[var(--accent-color)]/20 to-transparent rounded-3xl" />
 
-            <div className="relative glass-card-dark rounded-3xl px-5 sm:px-8 py-8 flex flex-col items-stretch gap-6 border border-[var(--accent-color)]/15">
+            <div className="relative glass-card-dark rounded-3xl px-6 sm:px-12 py-10 flex flex-col items-stretch gap-8 border border-[var(--accent-color)]/15">
               {/* Lot badge */}
-              <span className="self-center inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full bg-[var(--accent-color)]/10 text-[var(--accent-color)] border border-[var(--accent-color)]/25">
+              <span className="self-center inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] px-5 py-2.5 rounded-full bg-[var(--accent-color)]/10 text-[var(--accent-color)] border border-[var(--accent-color)]/25">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent-color)] opacity-75" />
                   <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent-color)]" />
@@ -57,12 +57,12 @@ export function FinalCTA() {
               </span>
 
               {/* Price */}
-              <div className="flex flex-col items-center gap-1 self-center">
+              <div className="flex flex-col items-center gap-2">
                 <p className="text-sm text-white/40 tracking-wide">
                   通常価格 <span className="line-through">{SALE_CONFIG.originalPrice.toLocaleString()}円</span>
                 </p>
-                <p className="text-5xl sm:text-7xl font-black text-white number-display leading-none">
-                  {SALE_CONFIG.salePrice.toLocaleString()}<span className="text-2xl font-bold text-gradient-gold-bright">円</span>
+                <p className="text-6xl sm:text-8xl font-black text-white number-display leading-none">
+                  {SALE_CONFIG.salePrice.toLocaleString()}<span className="text-3xl font-bold text-gradient-gold-bright">円</span>
                 </p>
                 <p className="text-xs text-white/35 tracking-wider mt-1">{SALE_CONFIG.priceNote}</p>
               </div>
@@ -73,11 +73,15 @@ export function FinalCTA() {
                   href={SALE_CONFIG.checkoutUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center py-5 text-lg font-black rounded-2xl bg-gradient-to-r from-[var(--accent-color)] to-[#e8d066] text-[var(--navy)] shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:shadow-[0_0_50px_rgba(212,175,55,0.6)] transition-all duration-300"
+                  className="block w-full text-center py-6 text-xl font-black rounded-2xl bg-gradient-to-r from-[var(--accent-color)] to-[#e8d066] text-[var(--navy)] shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:shadow-[0_0_70px_rgba(212,175,55,0.7)] hover:scale-[1.02] transition-all duration-300"
                 >
                   今すぐ申し込む →
                 </a>
               </MagneticButton>
+
+              <p className="text-center text-xs text-white/30 -mt-3">
+                <span className="text-[var(--accent-color)] font-bold">限定{SALE_CONFIG.limitedCount}部</span> · {SALE_CONFIG.lot}完売後は順次価格が上がります
+              </p>
             </div>
           </div>
         </FadeIn>

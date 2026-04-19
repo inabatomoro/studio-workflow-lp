@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
-  title: 'Studio Workflow — クライアントワーク完全マスター講座',
+  title: 'Studio Workflow — Studio×クライアントワーク攻略講座',
   description: '案件受注後から納品まで。クライアントワークの全工程を、この1本で完全マスター。',
   icons: {
     icon: '/sw.png',

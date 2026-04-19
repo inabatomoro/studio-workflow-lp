@@ -5,13 +5,12 @@ import { MagneticButton } from "@/components/ui/magnetic-button"
 import { SALE_CONFIG, DISCOUNT_PERCENT } from "@/lib/sale-config"
 
 const includes = [
-  "動画講座＋豪華5大特典セット",
   "全5章・50本以上の動画講義（一生涯アクセス）",
-  "特典1：2ヶ月間の伴走型メルマガ",
-  "特典2：質問し放題コミュニティ（2ヶ月）",
-  "特典3：プロのヒアリングシート",
-  "特典4：クライアント向け運用マニュアル案",
-  "特典5：追加特典（後日公開予定）",
+  "質問し放題コミュニティ（期限なし・永久無料）",
+  "Studio Workflow AI（専用AI Bot）",
+  "伴走型メルマガ（買い切り後も継続）",
+  "案件でそのまま使える9つのテンプレート",
+  "Studio基礎スライド（100ページ超）",
 ]
 
 export function Pricing() {

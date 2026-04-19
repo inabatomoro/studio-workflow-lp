@@ -29,10 +29,10 @@ export function Differentiator() {
             <p className="section-label mb-5">DIFFERENTIATOR</p>
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-6">
               なぜ、Studioの操作を学んでも<br />
-              <span className="text-gradient-gold">「案件」は進まないのか？</span>
+              <span className="text-gradient-gold">「案件」は進められないのか？</span>
             </h2>
             <p className="text-base text-[var(--text-body)] leading-relaxed mb-10 max-w-md">
-              操作を覚えても、案件を取れなければ意味がない。本講座はあなたが最後まで一人でやり切れるよう、<span className="font-semibold text-[var(--text-heading)]">ワークフロー全体を設計</span>しました。
+              ツールの操作を覚えても、案件進行の全体像を把握しなければ満足度の高い仕事はできません。本講座はあなたが最後まで一人でやり切れるよう、<span className="font-semibold text-[var(--text-heading)]">ワークフロー全体を意識した設計</span>にしました。
             </p>
             <a href="#pricing" className="btn-accent inline-block px-10 py-4 text-sm rounded-2xl">
               コースを今すぐ始める →
