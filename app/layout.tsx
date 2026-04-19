@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Outfit, Noto_Sans_JP } from 'next/font/google'
+import { PasswordGate } from '@/components/PasswordGate'
 import './globals.css'
 
 const outfit = Outfit({
@@ -37,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${outfit.variable} ${notoSansJP.variable}`}>
       <body className="font-sans antialiased text-[var(--text-body)] bg-[var(--surface-gray)] selection:bg-[var(--accent-light)] selection:text-[var(--accent-color)]">
-        {children}
+        <PasswordGate>{children}</PasswordGate>
       </body>
     </html>
   )
