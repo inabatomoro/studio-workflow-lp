@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 
-const PASSWORD = "sw2025" // ← パスワードはここを変更
+const PASSWORD = "sw2026" // ← パスワードはここを変更
 const SESSION_KEY = "sw_auth"
 
 export function PasswordGate({ children }: { children: React.ReactNode }) {
@@ -39,7 +39,7 @@ export function PasswordGate({ children }: { children: React.ReactNode }) {
           <div className="absolute -inset-2 bg-gradient-to-br from-[#D4AF37]/20 to-transparent rounded-3xl blur-2xl" />
           <div className="relative bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
             <div className="text-center mb-8">
-              <p className="text-xs font-bold tracking-[0.3em] uppercase text-[#D4AF37] mb-3">STUDIO WORKFLOW</p>
+              <p className="text-xs font-bold tracking-[0.3em] uppercase text-[#D4AF37] mb-3">Studio Workflow</p>
               <h1 className="text-xl font-black text-white">プレビュー</h1>
               <p className="text-sm text-white/40 mt-1">パスワードを入力してください</p>
             </div>
