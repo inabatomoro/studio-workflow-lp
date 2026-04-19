@@ -47,7 +47,7 @@ const testimonials = [
 ]
 
 // メイン動画ID — 実際のYouTube動画IDに差し替えてください
-const MAIN_VIDEO_ID = "dQw4w9WgXcQ"
+const MAIN_VIDEO_ID = "2NZoT3xC2R8"
 
 const VISIBLE = 3
 
