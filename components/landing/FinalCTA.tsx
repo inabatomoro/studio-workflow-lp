@@ -73,7 +73,7 @@ export function FinalCTA() {
                   href={SALE_CONFIG.checkoutUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center py-6 text-xl font-black rounded-2xl bg-gradient-to-r from-[var(--accent-color)] to-[#e8d066] text-[var(--navy)] shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:shadow-[0_0_70px_rgba(212,175,55,0.7)] hover:scale-[1.02] transition-all duration-300"
+                  className="btn-glint block w-full text-center py-6 text-xl font-black rounded-2xl text-[var(--navy)] shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:shadow-[0_0_70px_rgba(212,175,55,0.7)] hover:scale-[1.02] transition-shadow duration-300"
                 >
                   今すぐ申し込む →
                 </a>

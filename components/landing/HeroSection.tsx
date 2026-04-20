@@ -166,7 +166,7 @@ export function HeroSection() {
               className="flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start"
             >
               <MagneticButton>
-                <a href="#pricing" className="relative group inline-block text-center px-10 py-4 text-base font-bold rounded-2xl bg-gradient-to-r from-[var(--accent-color)] to-[#FDE08B] text-black shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:shadow-[0_0_60px_rgba(212,175,55,0.6)] transition-all duration-300">
+                <a href="#pricing" className="btn-glint relative group inline-block text-center px-10 py-4 text-base font-bold rounded-2xl text-black shadow-[0_0_40px_rgba(212,175,55,0.4)] hover:shadow-[0_0_60px_rgba(212,175,55,0.6)] transition-shadow duration-300">
                   <span className="relative z-10">今すぐ申し込む →</span>
                   <div className="absolute inset-0 rounded-2xl bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>

@@ -62,12 +62,7 @@ export function Bonuses() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {bonuses.map((bonus, i) => (
             <FadeIn key={i} delay={i * 100}>
-              <div
-                className={`h-full rounded-2xl p-7 flex flex-col transition-all duration-500 hover:-translate-y-1 ${false
-                  ? "opacity-50 glass-card-dark"
-                  : "glass-card-dark hover:border-[var(--accent-color)]/20"
-                  }`}
-              >
+              <div className="h-full rounded-2xl p-7 flex flex-col transition-all duration-500 hover:-translate-y-1 bg-white/[0.06] border border-white/15 hover:border-[var(--accent-color)]/40 backdrop-blur-sm">
                 <div className="flex items-start justify-between mb-5">
                   <span className={`text-[10px] font-black tracking-[0.2em] uppercase ${false ? "text-white/25" : "text-[var(--accent-color)]"}`}>
                     {bonus.num}
@@ -95,7 +90,7 @@ export function Bonuses() {
 
         {/* Total value */}
         <FadeIn delay={500} className="mt-12">
-          <div className="rounded-2xl px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-4 glass-card-dark border-[var(--accent-color)]/15">
+          <div className="rounded-2xl px-8 py-7 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white/[0.06] border border-white/15 backdrop-blur-sm">
             <div>
               <p className="text-xs font-bold text-[var(--accent-color)] tracking-wider uppercase mb-1">特典の総額</p>
               <p className="text-4xl font-black text-white number-display">¥76,000<span className="text-lg font-medium text-white/50">相当</span></p>
