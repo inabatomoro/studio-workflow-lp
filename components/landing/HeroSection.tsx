@@ -297,7 +297,7 @@ export function HeroSection() {
               { icon: "🎬", num: "50本+", label: "動画講義" },
               { icon: "📩", num: "メルマガ", label: "伴走配信" },
               { icon: "💬", num: "コミュニティ", label: "質問サポート" },
-              { icon: "🏷️", num: `${DISCOUNT_PERCENT}% OFF`, label: "初期限定価格" },
+              { icon: "🤖", num: "専用AI", label: "定着・壁打ちBOT" },
             ].map((item) => (
               <div key={item.label} className="flex flex-col items-center gap-2 text-center bg-white/5 border border-white/10 rounded-2xl py-5 px-3 hover:border-[var(--accent-color)]/30 transition-colors">
                 <span className="text-2xl">{item.icon}</span>
