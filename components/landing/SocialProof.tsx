@@ -73,6 +73,9 @@ export function SocialProof() {
           <p className="text-base text-[var(--text-body)] max-w-lg mx-auto leading-relaxed">
             これまでの受講生たちは多くの成果を出してきました！
           </p>
+          <p className="text-xs text-[var(--text-muted)] max-w-lg mx-auto mt-3">
+            ※以下の口コミは本コミュニティのものではなく、<br />主催が運営する別コミュニティの実績です。
+          </p>
         </FadeIn>
 
         {/* Testimonials carousel */}
