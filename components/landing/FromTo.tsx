@@ -7,9 +7,9 @@ export function FromTo() {
     <section className="section-white bg-pattern-dots pt-20 pb-36 px-6 relative overflow-hidden">
       <div className="max-w-5xl mx-auto relative z-10">
         <FadeIn className="text-center mb-16">
-          <p className="section-label justify-center mb-4">TRANSFORMATION</p>
+          <p className="section-label justify-center mb-4">YOUR FUTURE</p>
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-5">
-            受講後に手に入る<span className="text-gradient-gold">未来</span>
+            確かな自信を<span className="text-gradient-gold">手に入れよう</span>
           </h2>
           <p className="text-base text-[var(--text-body)] max-w-2xl mx-auto leading-relaxed">
             自己流でやってきた方も、0→1を目指す方も、<br className="hidden sm:block" />
@@ -25,7 +25,7 @@ export function FromTo() {
                 <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
                 BEFORE
               </span>
-              <p className="text-sm font-medium text-slate-400 mb-5 leading-relaxed">
+              <p className="text-sm font-medium text-slate-500 mb-5 leading-relaxed">
                 Studioの基本操作はできるけど、実案件を一人で進めるには不安がある状態
               </p>
               <ul className="space-y-3">
@@ -37,7 +37,7 @@ export function FromTo() {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-0.5 w-5 h-5 rounded-full bg-slate-200 text-slate-400 flex items-center justify-center flex-shrink-0 text-[10px]">✕</span>
-                    <span className="text-sm text-slate-400 leading-relaxed line-through decoration-slate-300">{item}</span>
+                    <span className="text-sm text-slate-500 leading-relaxed line-through decoration-slate-400">{item}</span>
                   </li>
                 ))}
               </ul>

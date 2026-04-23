@@ -77,7 +77,7 @@ export function Curriculum() {
             全5章・<span className="text-gradient-gold">50本以上</span>の動画講義
           </h2>
           <p className="text-base text-[var(--text-body)] leading-relaxed max-w-lg mx-auto">
-            受注からデザイン、実装、納品まで。実務フローを完全網羅した体系的カリキュラム。
+            受注後からデザイン、実装、納品まで。実務フローを完全網羅した体系的カリキュラム。
           </p>
         </FadeIn>
 
@@ -117,7 +117,7 @@ export function Curriculum() {
                           transform: open === i ? "rotate(180deg)" : "rotate(0deg)",
                         }}
                       >
-                        <path d="M3.5 5.25l3.5 3.5 3.5-3.5" stroke="var(--navy)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3.5 5.25l3.5 3.5 3.5-3.5" stroke="var(--navy)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                   </div>
@@ -146,6 +146,15 @@ export function Curriculum() {
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn delay={400} className="mt-10 text-center">
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 px-8 py-4 text-sm font-bold rounded-2xl border border-[var(--accent-color)]/40 text-[var(--accent-color)] hover:bg-[var(--accent-color)]/25 transition-all duration-200"
+          >
+            体験版はこちら →
+          </a>
+        </FadeIn>
 
       </div>
     </section>

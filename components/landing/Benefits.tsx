@@ -54,7 +54,7 @@ export function Benefits() {
         <FadeIn className="text-center mb-16">
           <p className="section-label justify-center mb-4">SOLUTION</p>
           <h2 className="text-2xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-5 whitespace-nowrap">
-            このコースで<span className="text-gradient-gold">手に入ること</span>
+            この講座で<span className="text-gradient-gold">学べること</span>
           </h2>
           <p className="text-base text-[var(--text-body)] max-w-xl mx-auto leading-relaxed">
             WEB制作の全体像を理解し、プロとして自信を持って現場に立てる力を。
