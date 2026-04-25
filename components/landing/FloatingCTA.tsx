@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { MagneticButton } from "@/components/ui/magnetic-button"
-import { SALE_CONFIG } from "@/lib/sale-config"
+import { SALE_CONFIG, DISCOUNT_PERCENT } from "@/lib/sale-config"
 
 export function FloatingCTA() {
   const [visible, setVisible] = useState(false)
@@ -55,8 +55,9 @@ export function FloatingCTA() {
             </div>
           </div>
           <MagneticButton className="w-full flex">
-            <a href={SALE_CONFIG.checkoutUrl} target="_blank" rel="noopener noreferrer" className="flex-1 block text-center px-6 py-2.5 text-sm font-black rounded-xl whitespace-nowrap bg-gradient-to-r from-[var(--accent-color)] to-[#e8d066] text-[var(--navy)] shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:shadow-[0_0_35px_rgba(212,175,55,0.6)] transition-all">
+            <a href={SALE_CONFIG.checkoutUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-1.5 px-6 py-2.5 text-sm font-black rounded-xl bg-gradient-to-r from-[var(--accent-color)] to-[#e8d066] text-[var(--navy)] shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:shadow-[0_0_35px_rgba(212,175,55,0.6)] transition-all">
               今すぐ申し込む →
+              <span className="bg-red-500/25 text-red-600 text-[9px] font-black px-1.5 py-0.5 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
             </a>
           </MagneticButton>
         </div>
@@ -72,8 +73,9 @@ export function FloatingCTA() {
           </div>
           <div className="w-px h-10 bg-white/10" />
           <MagneticButton>
-            <a href={SALE_CONFIG.checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 text-base font-black rounded-xl whitespace-nowrap bg-gradient-to-r from-[var(--accent-color)] to-[#e8d066] text-[var(--navy)] shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:shadow-[0_0_35px_rgba(212,175,55,0.6)] transition-all">
+            <a href={SALE_CONFIG.checkoutUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3 text-base font-black rounded-xl bg-gradient-to-r from-[var(--accent-color)] to-[#e8d066] text-[var(--navy)] shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:shadow-[0_0_35px_rgba(212,175,55,0.6)] transition-all">
               今すぐ申し込む →
+              <span className="bg-red-500/25 text-red-600 text-[10px] font-black px-2 py-0.5 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
             </a>
           </MagneticButton>
         </div>

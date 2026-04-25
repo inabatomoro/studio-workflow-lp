@@ -2,7 +2,7 @@
 
 import { FadeIn } from "./FadeIn"
 import { MagneticButton } from "@/components/ui/magnetic-button"
-import { SALE_CONFIG } from "@/lib/sale-config"
+import { SALE_CONFIG, DISCOUNT_PERCENT } from "@/lib/sale-config"
 
 export function FinalCTA() {
   return (
@@ -73,9 +73,10 @@ export function FinalCTA() {
                   href={SALE_CONFIG.checkoutUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-glint block w-full text-center py-6 text-xl font-black rounded-2xl text-[var(--navy)] shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:shadow-[0_0_70px_rgba(212,175,55,0.7)] hover:scale-[1.02] transition-shadow duration-300"
+                  className="btn-glint flex items-center justify-center gap-3 w-full py-6 text-xl font-black rounded-2xl text-[var(--navy)] shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:shadow-[0_0_70px_rgba(212,175,55,0.7)] hover:scale-[1.02] transition-shadow duration-300"
                 >
                   今すぐ申し込む →
+                  <span className="bg-red-500/25 text-red-600 text-xs font-black px-2.5 py-1 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
                 </a>
               </MagneticButton>
 

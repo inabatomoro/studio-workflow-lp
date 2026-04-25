@@ -1,6 +1,7 @@
 "use client"
 
 import { FadeIn } from "./FadeIn"
+import { DISCOUNT_PERCENT } from "@/lib/sale-config"
 
 const points = [
   {
@@ -34,8 +35,9 @@ export function Differentiator() {
             <p className="text-base text-[var(--text-body)] leading-relaxed mb-10 max-w-md">
               ツールの操作を覚えても、案件進行の全体像を把握しなければ満足度の高い仕事はできません。本講座はあなたが最後まで一人でやり切れるよう、<span className="font-semibold text-[var(--text-heading)]">ワークフロー全体を意識した設計</span>にしました。
             </p>
-            <a href="#pricing" className="btn-accent inline-block px-10 py-4 text-sm rounded-2xl">
+            <a href="#pricing" className="btn-accent inline-flex items-center gap-2 px-10 py-4 text-sm rounded-2xl">
               コースを今すぐ始める →
+              <span className="bg-red-500/25 text-red-600 text-[10px] font-black px-2 py-0.5 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
             </a>
           </FadeIn>
 

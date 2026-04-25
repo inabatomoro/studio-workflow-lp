@@ -74,8 +74,9 @@ export function Pricing() {
               </ul>
 
               <MagneticButton className="w-full">
-                <a href={SALE_CONFIG.checkoutUrl} target="_blank" rel="noopener noreferrer" className="btn-glint block text-center w-full py-5 text-lg font-black rounded-2xl text-[var(--navy)] shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] transition-shadow duration-500">
+                <a href={SALE_CONFIG.checkoutUrl} target="_blank" rel="noopener noreferrer" className="btn-glint flex items-center justify-center gap-3 w-full py-5 text-lg font-black rounded-2xl text-[var(--navy)] shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] transition-shadow duration-500">
                   今すぐ申し込む — {SALE_CONFIG.salePrice.toLocaleString()}円
+                  <span className="bg-red-500/25 text-red-600 text-[10px] font-black px-2 py-0.5 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
                 </a>
               </MagneticButton>
 
