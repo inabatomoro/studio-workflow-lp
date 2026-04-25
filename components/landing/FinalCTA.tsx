@@ -61,9 +61,12 @@ export function FinalCTA() {
                 <p className="text-sm text-white/40 tracking-wide">
                   通常価格 <span className="line-through">{SALE_CONFIG.originalPrice.toLocaleString()}円</span>
                 </p>
-                <p className="text-6xl sm:text-8xl font-black text-white number-display leading-none">
-                  {SALE_CONFIG.salePrice.toLocaleString()}<span className="text-3xl font-bold text-gradient-gold-bright">円</span>
-                </p>
+                <div className="flex items-baseline gap-3">
+                  <p className="text-6xl sm:text-8xl font-black text-white number-display leading-none">
+                    {SALE_CONFIG.salePrice.toLocaleString()}<span className="text-3xl font-bold text-gradient-gold-bright">円</span>
+                  </p>
+                  <span className="bg-red-500/20 text-red-400 text-xs font-bold px-2.5 py-1 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
+                </div>
                 <p className="text-xs text-white/35 tracking-wider mt-1">{SALE_CONFIG.priceNote}</p>
               </div>
 
@@ -73,10 +76,9 @@ export function FinalCTA() {
                   href={SALE_CONFIG.checkoutUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-glint flex items-center justify-center gap-3 w-full py-6 text-xl font-black rounded-2xl text-[var(--navy)] shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:shadow-[0_0_70px_rgba(212,175,55,0.7)] hover:scale-[1.02] transition-shadow duration-300"
+                  className="btn-glint block w-full text-center py-6 text-xl font-black rounded-2xl text-[var(--navy)] shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:shadow-[0_0_70px_rgba(212,175,55,0.7)] hover:scale-[1.02] transition-shadow duration-300"
                 >
                   今すぐ申し込む →
-                  <span className="bg-red-500/25 text-red-600 text-xs font-black px-2.5 py-1 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
                 </a>
               </MagneticButton>
 

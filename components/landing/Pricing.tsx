@@ -52,9 +52,12 @@ export function Pricing() {
                 <p className="text-sm text-white/40 mb-2">
                   通常価格 <span className="line-through">{SALE_CONFIG.originalPrice.toLocaleString()}円</span>
                 </p>
-                <p className="text-5xl sm:text-7xl md:text-8xl font-black text-white leading-none tracking-tight number-display">
-                  {SALE_CONFIG.salePrice.toLocaleString()}<span className="text-3xl font-bold text-gradient-gold-bright">円</span>
-                </p>
+                <div className="flex items-baseline justify-center gap-3">
+                  <p className="text-5xl sm:text-7xl md:text-8xl font-black text-white leading-none tracking-tight number-display">
+                    {SALE_CONFIG.salePrice.toLocaleString()}<span className="text-3xl font-bold text-gradient-gold-bright">円</span>
+                  </p>
+                  <span className="bg-red-500/20 text-red-400 text-xs font-bold px-2.5 py-1 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
+                </div>
                 <p className="text-sm text-white/45 mt-4 tracking-wide">
                   税込 · 買い切り · 一生涯アクセス
                 </p>
@@ -74,9 +77,8 @@ export function Pricing() {
               </ul>
 
               <MagneticButton className="w-full">
-                <a href={SALE_CONFIG.checkoutUrl} target="_blank" rel="noopener noreferrer" className="btn-glint flex items-center justify-center gap-3 w-full py-5 text-lg font-black rounded-2xl text-[var(--navy)] shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] transition-shadow duration-500">
+                <a href={SALE_CONFIG.checkoutUrl} target="_blank" rel="noopener noreferrer" className="btn-glint block text-center w-full py-5 text-lg font-black rounded-2xl text-[var(--navy)] shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_50px_rgba(212,175,55,0.5)] transition-shadow duration-500">
                   今すぐ申し込む — {SALE_CONFIG.salePrice.toLocaleString()}円
-                  <span className="bg-red-500/25 text-red-600 text-[10px] font-black px-2 py-0.5 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
                 </a>
               </MagneticButton>
 
