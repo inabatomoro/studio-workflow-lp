@@ -16,4 +16,5 @@ node_modules
 .DS_Store
 out/
 *.mp4
+!public/images/bonus-*.mp4
 .vercel
