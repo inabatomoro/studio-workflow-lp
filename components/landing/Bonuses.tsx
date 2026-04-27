@@ -5,28 +5,28 @@ import { FadeIn } from "./FadeIn"
 const bonuses = [
   {
     num: "特典 01",
-    title: "期限なし「質問し放題コミュニティ」",
+    title: "無期限・質問し放題『Studio Workflow コミュニティ』",
     desc: "教材に関することであれば何でも質問OK。期限なし・永久無料で利用できる専用コミュニティへ招待します。",
     value: "永久利用可能",
     price: "¥36,000相当",
   },
   {
     num: "特典 02",
-    title: "教材を壁打ちできる「Studio Workflow AI」",
+    title: "AIと壁打ち『Studio Workflow -Knowledge Base-』",
     desc: "NotebookLMで作成した教材ベースのAIボット。学んだ内容の定着や疑問の壁打ちにそのまま使えます。",
     value: "専用AIボット",
     price: "¥10,000相当",
   },
   {
     num: "特典 03",
-    title: "挫折をゼロにする「伴走型メルマガ」",
+    title: "挫折ゼロ支援『伴走型メルマガ』",
     desc: "買って終わりにさせない仕組み。学習の節目ごとに届くメルマガで、最後まで走りきれます。",
     value: "挫折回避",
     price: "¥10,000相当",
   },
   {
     num: "特典 04",
-    title: "案件でそのまま使える「9つのテンプレート」",
+    title: "実務でそのまま使える『9つのテンプレート』",
     desc: "ヒアリングシート・見積書・納品マニュアルなど、実務で即使える各種テンプレートを9点セットで提供。",
     value: "9点セット",
     price: "¥10,000相当",
@@ -69,38 +69,38 @@ export function Bonuses() {
                 </div>
 
                 <div className="p-7 flex flex-col flex-1">
-                <div className="flex items-start justify-between mb-5">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[10px] font-black tracking-[0.15em] uppercase px-3 py-1.5 rounded-lg bg-[var(--accent-color)] text-[var(--navy)]">
-                      {bonus.num}
-                    </span>
-                    {bonus.tag && (
-                      <span className="text-[11px] font-black text-sky-300 drop-shadow-[0_0_6px_rgba(125,211,252,0.6)]">
-                        {bonus.value}
+                  <div className="flex items-start justify-between mb-5">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-black tracking-[0.15em] uppercase px-3 py-1.5 rounded-lg bg-[var(--accent-color)] text-[var(--navy)]">
+                        {bonus.num}
                       </span>
-                    )}
+                      {bonus.tag && (
+                        <span className="text-[11px] font-black text-sky-300 drop-shadow-[0_0_6px_rgba(125,211,252,0.6)]">
+                          {bonus.value}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex flex-col items-end gap-1.5">
+                      {/* value: bonus 05 は下に移動、それ以外は赤 */}
+                      {!bonus.tag && (
+                        <span className="text-[10px] font-bold px-2.5 py-1 rounded-full border border-[var(--accent-color)]/30 text-[var(--accent-color)] bg-[var(--accent-color)]/10">
+                          {bonus.value}
+                        </span>
+                      )}
+                      {bonus.tag && (
+                        <span className="text-[10px] font-bold px-2.5 py-1 rounded-full border border-[var(--accent-color)]/30 text-[var(--accent-color)] bg-[var(--accent-color)]/10">
+                          {bonus.tag}
+                        </span>
+                      )}
+                      {bonus.price && (
+                        <span className="text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10 text-white/40 bg-white/5">
+                          {bonus.price}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                  <div className="flex flex-col items-end gap-1.5">
-                    {/* value: bonus 05 は下に移動、それ以外は赤 */}
-                    {!bonus.tag && (
-                      <span className="text-[10px] font-bold px-2.5 py-1 rounded-full border border-[var(--accent-color)]/30 text-[var(--accent-color)] bg-[var(--accent-color)]/10">
-                        {bonus.value}
-                      </span>
-                    )}
-                    {bonus.tag && (
-                      <span className="text-[10px] font-bold px-2.5 py-1 rounded-full border border-[var(--accent-color)]/30 text-[var(--accent-color)] bg-[var(--accent-color)]/10">
-                        {bonus.tag}
-                      </span>
-                    )}
-                    {bonus.price && (
-                      <span className="text-[10px] font-bold px-2.5 py-1 rounded-full border border-white/10 text-white/40 bg-white/5">
-                        {bonus.price}
-                      </span>
-                    )}
-                  </div>
-                </div>
-                <h3 className="text-[15px] font-bold mb-3 text-white leading-snug">{bonus.title}</h3>
-                <p className="text-sm leading-relaxed text-white/55">{bonus.desc}</p>
+                  <h3 className="text-[15px] font-bold mb-3 text-white leading-snug">{bonus.title}</h3>
+                  <p className="text-sm leading-relaxed text-white/55">{bonus.desc}</p>
                 </div>
               </div>
             </FadeIn>

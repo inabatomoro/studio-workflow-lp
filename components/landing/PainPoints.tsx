@@ -63,13 +63,15 @@ export function PainPoints() {
 
         {/* Bridge */}
         <FadeIn delay={400} className="mt-14">
-          <div className="glass-card rounded-2xl px-5 md:px-8 py-6 md:py-7 text-left max-w-2xl mx-auto">
-            <p className="text-base text-[var(--text-body)] leading-relaxed">
-              本講座は、単なるStudioの「ツール操作」を解説する教材ではありません。
+          <div className="max-w-2xl mx-auto">
+            <p className="text-2xl md:text-3xl font-black text-gradient-gold leading-snug mb-4 text-center">
+              本講座は、単なるStudioの「ツール操作」を<br className="hidden sm:block" />解説する教材ではありません！
             </p>
-            <p className="text-base font-bold text-[var(--text-heading)] mt-2 leading-relaxed">
-              実案件の納品までの流れと、初学者がつまづきやすい<span className="emphasis-underline">制作のポイント</span>を押さえてもらう講座です。
-            </p>
+            <div className="glass-card rounded-2xl px-5 md:px-8 py-6 md:py-7 text-left">
+              <p className="text-base font-bold text-[var(--text-heading)] leading-relaxed">
+                実案件の納品までの流れと、初学者がつまづきやすい<span className="emphasis-underline">制作のポイント</span>を押さえてもらう講座です。
+              </p>
+            </div>
           </div>
         </FadeIn>
       </div>

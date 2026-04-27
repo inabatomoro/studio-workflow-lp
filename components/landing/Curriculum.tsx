@@ -77,7 +77,7 @@ export function Curriculum() {
             全5章・<span className="text-gradient-gold">50本以上</span>の動画講義
           </h2>
           <p className="text-base text-[var(--text-body)] leading-relaxed max-w-lg mx-auto">
-            受注後からデザイン、実装、納品まで。実務フローを完全網羅した体系的カリキュラム。
+            受注後からデザイン、実装、納品まで。<br />実務フローを完全網羅した実践的カリキュラム。
           </p>
         </FadeIn>
 
@@ -103,7 +103,7 @@ export function Curriculum() {
                     </span>
                   </div>
                   <div className="flex items-center gap-3 flex-shrink-0 ml-4">
-                    <span className="text-xs hidden sm:block text-[var(--text-muted)] font-medium">
+                    <span className="text-xs hidden sm:block text-[var(--text-body)] font-medium">
                       {ch.lessons}本
                     </span>
                     <div className="w-7 h-7 rounded-full bg-[var(--surface-gray)] flex items-center justify-center">
