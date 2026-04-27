@@ -51,6 +51,8 @@ const bonuses = [
   },
 ]
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 export function Bonuses() {
   return (
     <section className="relative py-36 px-6 overflow-hidden bg-gradient-to-b from-[var(--navy)] via-[var(--navy)] to-[var(--navy-dark)]">
@@ -75,10 +77,10 @@ export function Bonuses() {
               <div className="h-full rounded-2xl overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-1 bg-white/[0.06] border border-white/15 hover:border-[var(--accent-color)]/40 backdrop-blur-sm">
                 <div className="w-full aspect-video bg-white/5 border-b border-white/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
                   {bonus.mediaType === "image" && (
-                    <img src={bonus.media!} alt={bonus.title} className="w-full h-full object-cover" />
+                    <img src={`${BASE}${bonus.media}`} alt={bonus.title} className="w-full h-full object-cover" />
                   )}
                   {bonus.mediaType === "video" && (
-                    <video src={bonus.media!} className="w-full h-full object-cover" autoPlay muted loop playsInline />
+                    <video src={`${BASE}${bonus.media}`} className="w-full h-full object-cover" autoPlay muted loop playsInline />
                   )}
                   {!bonus.media && (
                     <p className="text-[11px] text-white/25 font-medium">画像 / 動画をここに配置</p>
