@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { FadeIn } from "./FadeIn"
 
 const bonuses = [
@@ -54,6 +55,15 @@ const bonuses = [
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
 export function Bonuses() {
+  const [modal, setModal] = useState<{ media: string; mediaType: string; title: string } | null>(null)
+
+  useEffect(() => {
+    if (!modal) return
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setModal(null) }
+    document.addEventListener("keydown", onKey)
+    return () => document.removeEventListener("keydown", onKey)
+  }, [modal])
+
   return (
     <section className="relative py-36 px-6 overflow-hidden bg-gradient-to-b from-[var(--navy)] via-[var(--navy)] to-[var(--navy-dark)]">
       {/* Background Glows */}
@@ -75,7 +85,10 @@ export function Bonuses() {
           {bonuses.map((bonus, i) => (
             <FadeIn key={i} delay={i * 100} className={i === 4 ? "md:col-span-2 md:max-w-[calc(50%-10px)] md:mx-auto w-full" : ""}>
               <div className="h-full rounded-2xl overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-1 bg-white/[0.06] border border-white/15 hover:border-[var(--accent-color)]/40 backdrop-blur-sm">
-                <div className="w-full aspect-video bg-white/5 border-b border-white/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                <div
+                  className={`w-full aspect-video bg-white/5 border-b border-white/10 flex items-center justify-center flex-shrink-0 overflow-hidden relative group ${bonus.media ? "cursor-zoom-in" : ""}`}
+                  onClick={() => bonus.media && setModal({ media: bonus.media, mediaType: bonus.mediaType!, title: bonus.title })}
+                >
                   {bonus.mediaType === "image" && (
                     <img src={`${BASE}${bonus.media}`} alt={bonus.title} className="w-full h-full object-cover" />
                   )}
@@ -84,6 +97,13 @@ export function Bonuses() {
                   )}
                   {!bonus.media && (
                     <p className="text-[11px] text-white/25 font-medium">画像 / 動画をここに配置</p>
+                  )}
+                  {bonus.media && (
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-xs text-white font-semibold">
+                        拡大して見る
+                      </span>
+                    </div>
                   )}
                 </div>
 
@@ -141,5 +161,31 @@ export function Bonuses() {
         </FadeIn>
       </div>
     </section>
+
+    {/* Modal */}
+    {modal && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+        onClick={() => setModal(null)}
+      >
+        <div
+          className="relative max-w-4xl w-full rounded-2xl overflow-hidden shadow-2xl"
+          onClick={e => e.stopPropagation()}
+        >
+          <button
+            onClick={() => setModal(null)}
+            className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/80 transition-colors"
+          >
+            ✕
+          </button>
+          {modal.mediaType === "image" && (
+            <img src={`${BASE}${modal.media}`} alt={modal.title} className="w-full h-auto" />
+          )}
+          {modal.mediaType === "video" && (
+            <video src={`${BASE}${modal.media}`} className="w-full h-auto" autoPlay muted loop playsInline controls />
+          )}
+        </div>
+      </div>
+    )}
   )
 }
