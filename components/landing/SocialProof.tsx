@@ -158,14 +158,14 @@ export function SocialProof() {
           {/* Channel link */}
           <div className="mt-4 text-right">
             <a
-              href="https://www.youtube.com/@tom_studioworks"
+              href="https://www.youtube.com/playlist?list=PLRzuJUWfv9Qg5AOfY9ytp8WZK7i8pwdm9"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-[var(--text-muted)] hover:text-[var(--accent-color)] transition-colors duration-200 group"
             >
               その他の動画はこちら
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="group-hover:translate-x-0.5 transition-transform duration-200">
-                <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
           </div>

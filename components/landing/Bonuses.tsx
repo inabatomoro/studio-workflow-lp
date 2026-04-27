@@ -9,6 +9,8 @@ const bonuses = [
     desc: "教材に関することであれば何でも質問OK。期限なし・永久無料で利用できる専用コミュニティへ招待します。",
     value: "永久利用可能",
     price: "¥36,000相当",
+    media: "/images/bonus-01.mp4",
+    mediaType: "video",
   },
   {
     num: "特典 02",
@@ -16,6 +18,8 @@ const bonuses = [
     desc: "NotebookLMで作成した教材ベースのAIボット。学んだ内容の定着や疑問の壁打ちにそのまま使えます。",
     value: "専用AIボット",
     price: "¥10,000相当",
+    media: "/images/bonus-02.mp4",
+    mediaType: "video",
   },
   {
     num: "特典 03",
@@ -23,6 +27,8 @@ const bonuses = [
     desc: "買って終わりにさせない仕組み。学習の節目ごとに届くメルマガで、最後まで走りきれます。",
     value: "挫折回避",
     price: "¥10,000相当",
+    media: "/images/bonus-03.png",
+    mediaType: "image",
   },
   {
     num: "特典 04",
@@ -30,14 +36,18 @@ const bonuses = [
     desc: "ヒアリングシート・見積書・納品マニュアルなど、実務で即使える各種テンプレートを9点セットで提供。",
     value: "9点セット",
     price: "¥10,000相当",
+    media: "/images/bonus-04.png",
+    mediaType: "image",
   },
   {
     num: "特典 05",
-    title: "完全初学者向け「Studio基礎理解スライド」",
-    desc: "ローンチ時のXポストを引用リポストしてくれた方に限定でプレゼント。Studioをゼロから始める完全初学者向けに、基本操作から丁寧に解説した100ページ超のスライドです。本編の理解に必要な前提知識を習得できます。",
+    title: "完全初学者向け「Studio基礎理解スライド-130p-」",
+    desc: "ローンチ時のXポストを引用リポストしてくれた方に限定でプレゼント。Studioをゼロから始める完全初学者向けに、基本操作から丁寧に解説した130ページ超のスライドです。本編の理解に必要な前提知識を習得できます。",
     value: "引用リポスト限定",
-    tag: "100ページ超",
+    tag: "130ページ超",
     price: "¥10,000相当",
+    media: "/images/bonus-05.mp4",
+    mediaType: "video",
   },
 ]
 
@@ -63,9 +73,16 @@ export function Bonuses() {
           {bonuses.map((bonus, i) => (
             <FadeIn key={i} delay={i * 100} className={i === 4 ? "md:col-span-2 md:max-w-[calc(50%-10px)] md:mx-auto w-full" : ""}>
               <div className="h-full rounded-2xl overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-1 bg-white/[0.06] border border-white/15 hover:border-[var(--accent-color)]/40 backdrop-blur-sm">
-                {/* 画像・動画エリア — src を差し替えてください */}
-                <div className="w-full aspect-video bg-white/5 border-b border-white/10 flex items-center justify-center flex-shrink-0">
-                  <p className="text-[11px] text-white/25 font-medium">画像 / 動画をここに配置</p>
+                <div className="w-full aspect-video bg-white/5 border-b border-white/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  {bonus.mediaType === "image" && (
+                    <img src={bonus.media!} alt={bonus.title} className="w-full h-full object-cover" />
+                  )}
+                  {bonus.mediaType === "video" && (
+                    <video src={bonus.media!} className="w-full h-full object-cover" autoPlay muted loop playsInline />
+                  )}
+                  {!bonus.media && (
+                    <p className="text-[11px] text-white/25 font-medium">画像 / 動画をここに配置</p>
+                  )}
                 </div>
 
                 <div className="p-7 flex flex-col flex-1">
