@@ -4,7 +4,7 @@
 
 export const SALE_CONFIG = {
   // ロット情報
-  lot: "第1ロット",       // ← ロット切り替え時にここを更新
+  lot: "初回限定",       // ← ロット切り替え時にここを更新
   limitedCount: 20,      // ← ロット切り替え時にここを更新
   status: "受付中",
 
