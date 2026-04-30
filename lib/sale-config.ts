@@ -4,7 +4,7 @@
 
 export const SALE_CONFIG = {
   // ロット情報
-  lot: "リリース特化",       // ← ロット切り替え時にここを更新
+  lot: "リリース特化・",       // ← ロット切り替え時にここを更新
   limitedCount: 20,      // ← ロット切り替え時にここを更新
   status: "受付中",
 
@@ -13,7 +13,7 @@ export const SALE_CONFIG = {
   salePrice: 9980,     // ← ロット切り替え時にここを更新
 
   // 決済リンク（Stripeなど）
-  checkoutUrl: "https://",  // https://buy.stripe.com/28E00k5ZM9un7yh8T0fnO0d　← ロット切り替え時にここを更新
+  checkoutUrl: "https://", // ← ロット切り替え時にここを更新
 
   // バッジ下部テキスト
   priceNote: "税込・買い切り",
