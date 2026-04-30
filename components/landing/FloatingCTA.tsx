@@ -46,11 +46,11 @@ export function FloatingCTA() {
         <div className="absolute -inset-[1px] bg-gradient-to-r from-[var(--accent-color)]/60 via-[#FDE08B]/30 to-[var(--accent-color)]/60 rounded-2xl" />
 
         {/* モバイル：縦2段レイアウト */}
-        <div className="relative glass-card-dark rounded-2xl px-5 py-4 flex flex-col gap-3 shadow-2xl border border-[var(--accent-color)]/20 min-w-[260px] sm:hidden">
+        <div className="relative glass-card-dark rounded-2xl px-5 py-4 flex flex-col gap-3 shadow-2xl border border-[var(--accent-color)]/20 min-w-[320px] sm:hidden">
           <div className="flex items-center justify-between gap-4">
             <p className="text-[10px] font-bold text-[var(--accent-color)] tracking-wider uppercase whitespace-nowrap">限定{SALE_CONFIG.limitedCount}部</p>
-            <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-black number-display text-white">{SALE_CONFIG.salePrice.toLocaleString()}<span className="text-xs font-medium text-white/60">円</span></span>
+            <div className="flex items-baseline gap-2 whitespace-nowrap">
+              <span className="text-2xl font-black number-display text-white whitespace-nowrap">{SALE_CONFIG.salePrice.toLocaleString()}<span className="text-xs font-medium text-white/60">円</span></span>
               <span className="text-xs line-through text-white/30">{SALE_CONFIG.originalPrice.toLocaleString()}円</span>
               <span className="bg-red-500/20 text-red-400 text-[9px] font-bold px-1.5 py-0.5 rounded-full border border-red-500/30 whitespace-nowrap">{DISCOUNT_PERCENT}% OFF</span>
             </div>
