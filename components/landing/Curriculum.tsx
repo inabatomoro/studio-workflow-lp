@@ -147,15 +147,6 @@ export function Curriculum() {
           ))}
         </div>
 
-        <FadeIn delay={400} className="mt-10 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 px-8 py-4 text-sm font-bold rounded-2xl border border-[var(--accent-color)]/40 text-[var(--accent-color)] hover:bg-[var(--accent-color)]/25 transition-all duration-200"
-          >
-            体験版はこちら →
-          </a>
-        </FadeIn>
-
       </div>
     </section>
   )
