@@ -28,15 +28,17 @@ export function Differentiator() {
           <FadeIn direction="left" className="flex-1">
             <p className="section-label mb-5">DIFFERENTIATOR</p>
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-6">
-              なぜ、Studioの操作を学んでも<br />
+              なぜ、Studioの操作を学んでも
               <span className="text-gradient-gold">「案件」は進められないのか？</span>
             </h2>
             <p className="text-base text-[var(--text-body)] leading-relaxed mb-10 max-w-md">
               ツールの操作を覚えても、案件進行の全体像を把握しなければ満足度の高い仕事はできません。本講座はあなたが最後まで一人でやり切れるよう、<span className="font-semibold text-[var(--text-heading)]">ワークフロー全体を意識した設計</span>にしました。
             </p>
-            <a href="#pricing" className="btn-accent inline-block px-10 py-4 text-sm rounded-2xl">
-              コースを今すぐ始める →
-            </a>
+            <div className="text-center lg:text-left">
+              <a href="#pricing" className="btn-accent inline-block px-10 py-4 text-sm rounded-2xl">
+                コースを今すぐ始める →
+              </a>
+            </div>
           </FadeIn>
 
           {/* Right: Points */}
