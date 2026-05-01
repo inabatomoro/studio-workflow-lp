@@ -10,7 +10,7 @@ export const SALE_CONFIG = {
 
   // 価格
   originalPrice: 29800,
-  salePrice: 9980,     // ← ロット切り替え時にここを更新
+  salePrice: 14800,     // ← ロット切り替え時にここを更新
 
   // 決済リンク（Stripeなど）
   checkoutUrl: "https://buy.stripe.com/14A7sMewi0XR3i12uCfnO0f", // ← ロット切り替え時にここを更新
