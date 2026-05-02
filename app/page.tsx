@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/landing/HeroSection"
 import { FloatingCTA } from "@/components/landing/FloatingCTA"
 import { ReadingProgress } from "@/components/landing/ReadingProgress"
+import { LaunchBuzz } from "@/components/landing/LaunchBuzz"
 import { PainPoints } from "@/components/landing/PainPoints"
 import { FromTo } from "@/components/landing/FromTo"
 import { Benefits } from "@/components/landing/Benefits"
@@ -19,6 +20,7 @@ export default function Home() {
       <ReadingProgress />
       <FloatingCTA />
       <HeroSection />
+      <LaunchBuzz />
       <PainPoints />
       <FromTo />
       <Benefits />

@@ -414,6 +414,29 @@
   animation: pulse-glow 2.5s ease-in-out infinite;
 }
 
+/* ─── Marquee (LaunchBuzz) ─── */
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-left {
+  width: max-content;
+  animation: marquee-left 70s linear infinite;
+}
+.marquee-right {
+  width: max-content;
+  animation: marquee-right 70s linear infinite;
+}
+.marquee-left:hover,
+.marquee-right:hover {
+  animation-play-state: paused;
+}
+
 /* ─── Divider with fade ─── */
 .divider-fade {
   height: 1px;
