@@ -93,7 +93,7 @@ export function LaunchBuzz() {
         </FadeIn>
 
         {/* Metrics */}
-        <FadeIn delay={100} className="flex flex-wrap justify-center gap-4 mb-12">
+        <FadeIn delay={100} className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-3xl mx-auto mb-12">
           {[
             { icon: "⚡", value: "即時配布", label: "購入後すぐに視聴スタート" },
             { icon: "🎁", value: "限定特典", label: "充実した購入者限定特典" },
@@ -101,12 +101,12 @@ export function LaunchBuzz() {
           ].map((item) => (
             <div
               key={item.label}
-              className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-6 py-4 backdrop-blur-sm"
+              className="flex items-center justify-center gap-3 bg-white/5 border border-white/10 rounded-2xl px-5 py-4 backdrop-blur-sm w-full"
             >
-              <span className="text-2xl">{item.icon}</span>
-              <div>
-                <div className="text-base font-black text-[#D4AF37] leading-tight">{item.value}</div>
-                <div className="text-xs text-white/45 mt-0.5">{item.label}</div>
+              <span className="text-2xl flex-shrink-0">{item.icon}</span>
+              <div className="text-left min-w-[150px]">
+                <div className="text-base font-black text-[#D4AF37] leading-tight whitespace-nowrap">{item.value}</div>
+                <div className="text-xs text-white/45 mt-0.5 whitespace-nowrap">{item.label}</div>
               </div>
             </div>
           ))}
