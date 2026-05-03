@@ -54,13 +54,26 @@ export function LaunchBuzz() {
 
       <div className="max-w-6xl mx-auto px-5 md:px-8 relative z-10">
         <FadeIn className="text-center mb-10">
-          <span className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6">
-            <span className="relative flex h-2 w-2 flex-shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-400" />
+          <div className="relative inline-flex mb-7">
+            <div className="absolute -inset-1 bg-gradient-to-r from-red-500/40 via-[#FDE08B]/30 to-red-500/40 rounded-full blur-md opacity-70 animate-pulse" />
+            <span className="relative inline-flex items-center gap-2.5 bg-gradient-to-r from-red-500/20 via-[#D4AF37]/15 to-red-500/20 border border-[#D4AF37]/40 text-white text-sm md:text-base font-black px-5 md:px-7 py-2.5 md:py-3 rounded-full tracking-wide shadow-[0_0_30px_rgba(212,175,55,0.25)]">
+              <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-400" />
+              </span>
+              <span>リリース2日で</span>
+              <span
+                className="text-xl md:text-2xl number-display font-black drop-shadow-[0_0_12px_rgba(212,175,55,0.5)]"
+                style={{
+                  background: "linear-gradient(135deg, #D4AF37 0%, #FDE08B 50%, #D4AF37 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >85部</span>
+              <span>突破🔥</span>
             </span>
-            Launch Buzz
-          </span>
+          </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight mb-4">
             販売開始から
             <span
