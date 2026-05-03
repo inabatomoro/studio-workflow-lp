@@ -7,6 +7,7 @@ import { FromTo } from "@/components/landing/FromTo"
 import { Benefits } from "@/components/landing/Benefits"
 import { Curriculum } from "@/components/landing/Curriculum"
 import { Bonuses } from "@/components/landing/Bonuses"
+import { StudentVoices } from "@/components/landing/StudentVoices"
 import { Differentiator } from "@/components/landing/Differentiator"
 import { SocialProof } from "@/components/landing/SocialProof"
 import { Pricing } from "@/components/landing/Pricing"
@@ -26,6 +27,7 @@ export default function Home() {
       <Benefits />
       <Curriculum />
       <Bonuses />
+      <StudentVoices />
       <Differentiator />
       <SocialProof />
       <Pricing />
