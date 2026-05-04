@@ -13,7 +13,7 @@ export const SALE_CONFIG = {
   salePrice: 28800,     // ← ロット切り替え時にここを更新
 
   // 決済リンク（Stripeなど）
-  checkoutUrl: "https://buy.stripe.com/6oUdRa73QgWPaKt1qyfnO0k", // ← ロット切り替え時にここを更新
+  checkoutUrl: "https://buy.stripe.com/9B6cN65ZM7mf19T7OWfnO0l", // ← ロット切り替え時にここを更新
 
   // バッジ下部テキスト
   priceNote: "税込・買い切り",
