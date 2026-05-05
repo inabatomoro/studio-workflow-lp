@@ -4,7 +4,7 @@ import { FadeIn } from "./FadeIn"
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
-const reviewImages: string[] = Array.from({ length: 36 }, (_, i) =>
+const reviewImages: string[] = Array.from({ length: 63 }, (_, i) =>
   `/images/reviews/review-${String(i + 1).padStart(2, "0")}.png`
 )
 
