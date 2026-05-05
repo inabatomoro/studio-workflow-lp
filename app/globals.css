@@ -506,7 +506,7 @@
 
 .marquee-right {
   width: max-content;
-  animation: marquee-right 30s linear infinite;
+  animation: marquee-right 70s linear infinite;
 }
 
 .marquee-left:hover,
