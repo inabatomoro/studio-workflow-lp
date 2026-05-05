@@ -501,12 +501,12 @@
 
 .marquee-left {
   width: max-content;
-  animation: marquee-left 70s linear infinite;
+  animation: marquee-left 90s linear infinite;
 }
 
 .marquee-right {
   width: max-content;
-  animation: marquee-right 70s linear infinite;
+  animation: marquee-right 90s linear infinite;
 }
 
 .marquee-left:hover,
