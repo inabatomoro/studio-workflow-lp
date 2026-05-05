@@ -501,7 +501,7 @@
 
 .marquee-left {
   width: max-content;
-  animation: marquee-left 30s linear infinite;
+  animation: marquee-left 70s linear infinite;
 }
 
 .marquee-right {
