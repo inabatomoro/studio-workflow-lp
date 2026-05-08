@@ -4,9 +4,14 @@ import { FadeIn } from "./FadeIn"
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
-const reviewImages: string[] = Array.from({ length: 63 }, (_, i) =>
-  `/images/reviews/review-${String(i + 1).padStart(2, "0")}.png`
-)
+const reviewImages: string[] = [
+  ...Array.from({ length: 63 }, (_, i) =>
+    `/images/reviews/review-${String(i + 1).padStart(2, "0")}.png`
+  ),
+  "/images/reviews/スクリーンショット 2026-05-08 17.00.49.png",
+  "/images/reviews/スクリーンショット 2026-05-08 17.01.10.png",
+  "/images/reviews/スクリーンショット 2026-05-08 17.01.18.png",
+]
 
 // 画像が未設定のときに表示するダミー枚数
 const DUMMY_COUNT = 8
@@ -132,6 +137,22 @@ export function LaunchBuzz() {
             <ImageCard key={i} src={item.src} index={item.index} />
           ))}
         </div>
+      </div>
+
+      {/* Hashtag link */}
+      <div className="relative z-10 flex justify-center mt-8">
+        <p className="text-white/50 text-sm">
+          講座の口コミ情報はXで{" "}
+          <a
+            href="https://x.com/hashtag/%E3%82%B9%E3%82%BF%E3%83%95%E3%83%AD?src=hashtag_click"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#D4AF37] font-bold hover:text-[#FDE08B] transition-colors duration-200"
+          >
+            #スタフロ
+          </a>
+          {" "}と検索！
+        </p>
       </div>
 
       {/* Bottom separator */}

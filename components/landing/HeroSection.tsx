@@ -51,7 +51,33 @@ export function HeroSection() {
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[var(--accent-color)] opacity-[0.05] rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-5 md:px-8 pt-10 pb-20 md:pt-14 md:pb-28">
-        {/* Urgency Badge */}
+        {/* Urgency Badge — 第1期締切バージョン */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex justify-center mb-8"
+        >
+          <div className="relative group cursor-default">
+            {/* Outer glow */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-red-500/50 via-orange-400/30 to-red-500/50 rounded-full blur-md opacity-80 animate-pulse" />
+            <span className="relative inline-flex items-center gap-2 sm:gap-3 bg-red-950/60 border border-red-400/60 px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-black tracking-normal sm:tracking-wider uppercase text-red-300 shadow-[0_0_30px_rgba(239,68,68,0.3)]">
+              {/* Ping dot */}
+              <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-400" />
+              </span>
+              <span className="text-orange-300">第1期募集</span>
+              <span className="w-px h-4 bg-red-400/40" />
+              <span className="text-white">5月10日 23:59 締切</span>
+              <span className="w-px h-4 bg-red-400/40" />
+              <span className="text-red-300 font-black">まもなく終了</span>
+            </span>
+          </div>
+        </motion.div>
+
+        {/* Urgency Badge — 旧バージョン（非表示・再利用用） */}
+        {false && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,6 +101,7 @@ export function HeroSection() {
             </span>
           </div>
         </motion.div>
+        )}
 
         <div
           ref={ref}
